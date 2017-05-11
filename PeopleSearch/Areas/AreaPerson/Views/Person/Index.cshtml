@@ -1,0 +1,172 @@
+﻿@model PeopleSearch.ViewModels.ConnectionStringViewModel
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm(""))
+{
+    @*// "connectionString=Data Source=LENOVO-PC\SQLEXPRESS;Database=person;Integrated Security=True"*@
+    <div class="page-header col-sm-10"><h1>Configure ConnectionString</h1></div>
+    <div class="container form-horizontal">
+        <div class="form-group">
+            <div class=" col-sm-8">
+                <h3> Option I  </h3>
+                <h4>(This option works only for SQLServer provider with 'Windows Authentication')</h4>
+            </div>
+        </div>
+
+
+        <div class=" form-group">
+            <div class="col-md-2">
+                @Html.Label(@"Name (in webconfig):", new { @class = "control-label", @for = "inputdefault" })
+            </div>
+            <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Name, new { @disabled = "true", @class = "form-control name" })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class=" form-group">
+            <div class="col-md-2">
+                @Html.Label(@"Provider name:", new { @class = "control-label", @for = "inputdefault" })
+            </div>
+            <div class="col-md-5">
+                @Html.TextBoxFor(model => model.ProviderName, new { @class = "providerName form-control" })
+                @Html.ValidationMessageFor(model => model.ProviderName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class=" form-group">
+            <div class="col-md-2">
+                @Html.Label(@"Sql Server name:", new { @class = "control-label", @for = "inputdefault" })
+            </div>
+            <div class="col-md-5">
+                @Html.TextBoxFor(model => model.ServerNameValue, new { @id = "ServerNameValue", @class = "providerName form-control" })
+                @Html.ValidationMessageFor(model => model.ServerNameValue, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class=" form-group">
+            <div class="col-md-2">
+                @Html.Label(@"Sql Instances:", new { @class = "control-label", @for = "inputdefault" })
+            </div>
+            <div class="col-md-5">
+                @Html.DropDownListFor(model => model.SqlServerInstances, new SelectList(Model.SqlServerInstances), new { @id = "dropDown", @class = "providerName form-control" })
+                <label for="formGroupExampleInput">Edit:</label>
+                @Html.CheckBoxFor(Model => Model.isCustomInstance, new { id = "isCustomInstance", @selected = "false" })
+
+                @Html.TextBoxFor(model => model.SqlServerInstanceValue, new { @id = "SqlServerInstanceValue", @disabled = "true", @class = "providerName form-control" })
+                @Html.ValidationMessageFor(model => model.SqlServerInstanceValue, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class=" form-group">
+            <div class="col-md-2">
+                @Html.Label("Database name:", new { @class = "control-label", @for = "inputdefault" })
+            </div>
+            <div class="col-md-5">
+                @Html.TextBoxFor(model => model.DatabaseValue, new { @id = "DatabaseValue", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DatabaseValue, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class=" form-group">
+            <div class="col-md-2">
+                @Html.Label("Integrated Security:", new { @class = "control-label", @for = "inputdefault" })
+            </div>
+            <div class="col-md-5">
+                @Html.TextBoxFor(model => model.IntegratedSecurityValue, new { @id = "IntegratedSecurityValue", disabled = true, @class = "providerName form-control" })
+                @Html.ValidationMessageFor(model => model.IntegratedSecurityValue, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class=" form-group">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-5">
+                <button type="submit" id="btnSubmit1" class="btn btn-success btn-block">Configure SQL Server</button>
+            </div>
+        </div>
+
+        <div id="ConfigurationResultDiv1"></div>
+    </div>
+
+}
+<div id="spinner">
+    Loading...
+</div>
+
+@using (Html.BeginForm())
+{
+    <div class="container form-horizontal">
+        <div class="form-group">
+            <div class=" col-sm-8">
+                <h3> Option II  </h3>
+                <h4>(For any database)</h4>
+            </div>
+        </div>
+
+
+        <div class=" form-group">
+            <div class="col-md-2">
+                @Html.Label(@"Name (in webconfig):", new { @class = "control-label", @for = "inputdefault" })
+            </div>
+            <div class="col-md-5">
+                @Html.TextBoxFor(model => model.Name, new { @disabled = "true", @class = "name form-control" })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class=" form-group">
+            <div class="col-md-2">
+                @Html.Label(@"Provider name:", new { @class = "control-label", @for = "inputdefault" })
+            </div>
+            <div class="col-md-5">
+                @Html.TextBoxFor(model => model.ProviderName, new { @disabled = "true", @id = "ProviderName2", @class = "providerName form-control" })
+                @Html.ValidationMessageFor(model => model.ProviderName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class=" form-group">
+            <div class="col-md-2">
+                @Html.Label(@"ConnectionString:", new { @class = "control-label", @for = "inputdefault" })
+            </div>
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.FinalConfigurationString, new
+           {
+               maxlength = "255",
+               placeholder = @"Data Source=SERVER_NAME\SQL_INSTANCE_NAME;Database=DATABASE_NAME;Integrated Security=True_OR_FALSE (username and pwd also allowed)",
+               @class = " form-control"
+           })
+                @Html.ValidationMessageFor(model => model.FinalConfigurationString, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+
+        <div class=" form-group">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-5">
+                <button type="submit" id="btnSubmit2" class="btn btn-success btn-block">Configure</button>
+            </div>
+           
+        </div>
+
+        <div id="ConfigurationResultDiv2"></div>
+
+    </div>
+}
+
+
+
+@*@Html.Rend("ConfigurationResult", new PeopleSearch.Models.ConnectionString())*@
+
+@Scripts.Render("~/bundles/jquery")
+@Styles.Render("~/Common/css")
+@Scripts.Render("~/bundles/common/indexJS")
+
+

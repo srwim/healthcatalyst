@@ -1,0 +1,39 @@
+﻿.detail-div-top-buffer {
+    margin-top: 10px;
+    /*margin-left:-15px;*/
+}
+
+.person-info{
+    margin-top:40px;
+}
+
+.person-row-div {
+    background-color: #f1f1f1;
+    color: black;
+    padding: 2px;
+    margin-bottom:10px;
+  
+}
+
+/* item styles */
+.item-image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+  border:solid;
+  border-color:gray;
+}
+.item-image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-height:100%;
+}
+
+
+
+
+

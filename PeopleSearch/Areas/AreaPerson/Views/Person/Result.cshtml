@@ -1,0 +1,64 @@
+﻿
+@model IEnumerable<PeopleSearch.ViewModels.PersonViewModel>
+
+@if(Model.Count() < 1)
+{
+    <div class="alert-warning col-sm-offset-5 col-sm-4 zeroRecordMsg">No person exist with this name. Please try again! </div>
+}
+
+@foreach (var person in Model)
+{
+    <div class="container detail-div-top-buffer">
+        <div class="row col-sm-12 person-row-div">
+
+            <div class="col-sm-3">
+                <div class=" item-image ">
+                    <img src="@person.Image" class="img-responsive">
+                </div>
+            </div>
+
+            <div class="col-sm-9 person-info">
+
+                <div class=" row">
+                    <label class="col-sm-3 col-form-label">First name</label>
+                    <div class="col-sm-9">
+                        <p class="">@person.FirstName</p>
+                    </div>
+                </div>
+
+                <div class=" row">
+                    <label class="col-sm-3 col-form-label">Last name</label>
+                    <div class="col-sm-9">
+                        <p class="">@person.LastName</p>
+                    </div>
+                </div>
+
+                <div class=" row">
+                    <label class="col-sm-3 col-form-label">Age (yrs.)</label>
+                    <div class="col-sm-9">
+                        <p class="c">@person.Age</p>
+                    </div>
+                </div>
+
+                <div class=" row">
+                    <label class="col-sm-3 col-form-label">Address</label>
+                    <div class="col-sm-9">
+                        <p class="">@person.Address</p>
+                    </div>
+                </div>
+
+                <div class=" row">
+                    <label class="col-sm-3 col-form-label">Hobbies</label>
+                    <div class="col-sm-9">
+                        <p class="">@person.Hobbies</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+}
+
+@Styles.Render("~/Common/css")

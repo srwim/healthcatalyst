@@ -1,0 +1,44 @@
+﻿@model PeopleSearch.Areas.AreaPerson.Models.ConnectionString
+
+@if (@Model.Message.Contains("Connection established successfully"))
+{
+    <div class="col-lg-offset-2 col-sm-10 form-control-static ">
+
+        <div class="alert-success">
+            <label>
+                Connection String Validated Successfully.
+                @Html.Label(@Model.Message)
+            </label>
+
+            <div class="">
+                <label>
+                    Final Connection string:
+                    @Html.Label(@Model.FinalConfigurationString)
+                </label>
+            </div>
+        </div>
+    </div>
+
+}
+
+@if (!@Model.Message.Contains("Connection established successfully"))
+{
+    <div class="col-lg-offset-2 form-control-static ">
+        <div class="alert-danger">
+            <label> Incorrect connection string. Please provide new connectionstring, and try again.</label>
+            @Html.Label(@Model.Message)
+
+            <div class="">
+                <label>
+                    Your connection ctring was:
+                    @Html.Label(@Model.FinalConfigurationString)
+                </label>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+

@@ -1,0 +1,84 @@
+﻿@model PeopleSearch.Areas.AreaPerson.Models.Person
+@{
+    ViewBag.Title = "Register a person";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container form-horizontal registration-container-div">
+    <div class="page-header col-sm-10"><h1>Register</h1></div>
+    <div class="row col-sm-10 ">
+
+
+
+        <div class="form-group">
+            <div class=" col-sm-6">
+                <input type="text" id="firstName" class="textBox form-control " placeholder="First name" />
+                @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-sm-6  ">
+                <input type="text" id="lastName" class="textBox form-control " placeholder="Last name" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" col-sm-12 ">
+                <input type="text" id="address" class="textBox form-control" placeholder="Address" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12 ">
+                <textarea id="hobbies" class="textBox form-control" placeholder="Hobbies"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12 ">
+                <label for="formGroupExampleInput">Male:</label>    @Html.RadioButton("Gender", "Male", new { id = "gender", @checked = "ture" })
+                <label for="formGroupExampleInput">Female:</label>  @Html.RadioButton("Gender", "Female", new { id = "gender" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" col-sm-4 ">
+                <label for="formGroupExampleInput">Birthday</label>
+                <input type="date" id="dob" class="textBox form-control" placeholder="Enter dob" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" col-sm-12  ">
+                <label for="control-label">Image</label>
+                <input type="file" id="attachment" onchange="ChangeAttachment(event)" class="file  input-files cols-sm-9" />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-4  ">
+                <button id="registerBtn" onclick="RegisterPerson()" class="btn btn-success btn-block">Register</button>
+            </div>
+            <div class="" id="validationMessage">
+                <p></p>
+            </div>
+        </div>
+
+        <div class="container top-buffer">
+            <div class="form-group ">
+                <div class="" id="successMessage">
+                </div>
+
+                <div class="" id="errorMessage">
+                    <strong></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Scripts.Render("~/bundles/jquery")
+@Styles.Render("~/Common/css")
+@Scripts.Render("~/bundles/common/registerJs")

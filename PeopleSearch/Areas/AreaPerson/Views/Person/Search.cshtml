@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PeopleSearch.Areas.AreaPerson.Models.Person>
+
+@{
+    ViewBag.Title = "Search for a person";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container search-container-div">
+    <div class="page-header col-sm-offset-2 col-sm-8" ><h1>Search person by first name or last name</h1></div>
+    <div class="row col-sm-10">
+        <div class="input-group col-sm-offset-5 col-sm-5">
+            <input type="text" id="searchTextBox" class="input-lg form-control searchTextBox" placeholder="Enter first name or last name" />
+            <span class="input-group-addon search-span" id="searchBtn" onclick="SearchPerson(event)">
+                <i class="glyphicon glyphicon-search"></i>
+            </span>
+        </div>
+
+        <div id="blankValidationMsg" class="col-sm-offset-5 col-sm-4" style="color:red"></div>
+    </div>
+   
+</div>
+
+    <div id="spinner">
+        Loading...
+    </div>
+
+
+    <div id="peopleDetails" class="peopleDetails">
+
+    </div>
+
+
+
+
+
+@Scripts.Render("~/bundles/jquery")
+@Styles.Render("~/Common/css")
+@Scripts.Render("~/bundles/common/searchJs")
+

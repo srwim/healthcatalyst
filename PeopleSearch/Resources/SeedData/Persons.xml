@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<person>
+
+  <detail>
+    <firstname>Robert</firstname>
+    <lastname>Krueger</lastname>
+    <dataofbirth>3/21/1985</dataofbirth>
+    <gender>Male</gender>
+    <address>425 S 1000 E, #512C, Salt Lake City, Utah</address>
+    <hobbies>
+      Military History, Outdoors Activities, Winter Sports, Water Sports, SCUBA Diving, Travel
+    </hobbies>
+    <imagename>Robert_Krueger.JPG</imagename>
+
+  </detail>
+  
+  
+  <detail>
+    <firstname>Albert</firstname>
+    <lastname>Einstein</lastname>
+    <dataofbirth>10/10/1934</dataofbirth>
+    <gender>Male</gender>
+    <address>Washington street, #9001, Cityview at Longwood, Boston, MA - 02120</address>
+    <hobbies>Playing music helps with creativity, analytical skills, language, math, fine motor skills and more. While these are all great advantages, some people argue that playing team sports might do as many things. What playing musical instruments does that other activities don’t is strengthen the corpus callosum that links the hemispheres of the brain by creating new connections. 
+    </hobbies>
+    <imagename>Albert_Einstein.jpg</imagename>
+   
+  </detail>
+
+  <detail>
+    <firstname>Benjamin</firstname>
+    <lastname>Franklin</lastname>
+    <dataofbirth>10/10/1934</dataofbirth>
+    <gender>Male</gender>
+    <address>Benjamin street, #9001, Cityview at Franklin, Boston, MA - 02120</address>
+    <hobbies>
+      Benjamin Franklin's hobbies were reading, writing, printing, experimenting, inventing, debating, traveling and being active in politics. One of Franklin's greatest passions was reading, even when he was a young boy. After being apprenticed to his brother, he worked in printing until he was in his early 40s and then retired to pursue other hobbies.
+    </hobbies>
+    <imagename>Benjamin_Franklin.jpg</imagename>
+
+  </detail>
+
+  <detail>
+    <firstname>Compton</firstname>
+    <lastname>Tucker</lastname>
+    <dataofbirth>10/10/1935</dataofbirth>
+    <gender>Male</gender>
+    <address>Washington street, #9001, Cityview at Longwood, Boston, MA - 02120</address>
+    <hobbies>
+      Dr. Tucker like studying the earth with satellite data. He was among the first researchers to employ coarse-resolution satellite data to exploit the time domain for studying global photosynthesis on land, determining land cover, monitoring droughts, providing famine early warning, and predicting ecologically-coupled disease outbreaks. He has also used large quantities of Landsat data to study forest condition, deforestation, and forest fragmentation in temperate, subtropical, and tropical forests. From 2006 to 2009 he was on NASA detail to the Climate Change Science Program where he was the co-chairperson of two Interagency Working Groups on (1) Observations and (2) Land Use and Land Cover Change.
+    </hobbies>
+    <imagename>Compton_Tucker.jpg</imagename>
+
+  </detail>
+
+  <detail>
+    <firstname>Marie</firstname>
+    <lastname>Curie</lastname>
+    <dataofbirth>9/7/1867</dataofbirth>
+    <gender>Female</gender>
+    <address>Washington street, #9001, Cityview at Longwood, Boston, MA - 02120</address>
+    <hobbies>
+      efore completing her master’s mathematics degree program, Marie was commissioned to do a study on the magnetic properties of different steels related to their chemical compositions by the Society for the Encouragement of National Industry. However, they did not provide a lab space, so she had to hunt for a lab on her own. She mentioned her need for space to an acquaintance of hers, a Polish physicist, in the spring of 1894. Her acquaintance had a colleague named Pierre Curie, who had pioneered magnetism research and was in a good position to help Marie. Pierre was the laboratory chief at the Municipal School of Industrial Physics and Chemistry in Paris. Marie’s acquaintance didn’t realize Pierre’s own facilities were inadequate for Marie's needs, but facilitated their meeting anyway.
+    </hobbies>
+    <imagename>Marie_Curie.jpg</imagename>
+
+  </detail>
+
+  <detail>
+    <firstname>Raymond</firstname>
+    <lastname>Davis</lastname>
+    <dataofbirth>10/14/1914</dataofbirth>
+    <gender>Male</gender>
+    <address>Raymond street, #9001, Cityview at Davis, Boston, MA - 02120</address>
+    <hobbies>
+      Davis reports that he was asked "to find something interesting to work on," and dedicated his career to the study of neutrinos, particles which had been predicted to explain the process of beta decay, but whose separate existence had not been confirmed.
+    </hobbies>
+    <imagename>Raymond_Davis.jpg</imagename>
+
+  </detail>
+
+  <detail>
+    <firstname>Rosalind</firstname>
+    <lastname>Franklin</lastname>
+    <dataofbirth>7/25/1920</dataofbirth>
+    <gender>Female</gender>
+    <address>Washington street, #9001, Chepstow Villas, Notting Hill, London</address>
+    <hobbies>
+      From early childhood, Franklin showed exceptional scholastic abilities. At age six, she joined her brother Roland at Norland Place School, a private day school in West London. At that time, her aunt Mamie (Helen Bentwich), described her to her husband: "Rosalind is alarmingly clever – she spends all her time doing arithmetic for pleasure, and invariably gets her sums right."[22] She also developed an early interest in cricket and hockey.
+    </hobbies>
+    <imagename>Rosalind_Franklin.jpg</imagename>
+
+  </detail>
+
+  <detail>
+    <firstname>Stephen</firstname>
+    <lastname>Hawking</lastname>
+    <dataofbirth>1/8/1942</dataofbirth>
+    <gender>Male</gender>
+    <address>Stephen street, #9001, Oxford, England</address>
+    <hobbies>
+      For his communication, Hawking initially raised his eyebrows to choose letters on a spelling card.[102] But in 1986 he received a computer program called the "Equalizer" from Walter Woltosz, CEO of Words Plus, who had developed an earlier version of the software to help his mother-in-law, who also suffered from ALS and had lost her ability to speak and write.[103] In a method he uses to this day, Hawking could now simply press a switch to select phrases, words or letters from a bank of about 2,500–3,000 that are scanned.
+    </hobbies>
+    <imagename>Stephen_Hawking.jpg</imagename>
+
+  </detail>
+
+  <detail>
+    <firstname>Vint</firstname>
+    <lastname>Cerf</lastname>
+    <dataofbirth>6/23/1943</dataofbirth>
+    <gender>Male</gender>
+    <address>Stephen street, #9001, Oxford, England</address>
+    <hobbies>
+      n the early days, Cerf was a manager for the United States' Defense Advanced Research Projects Agency (DARPA) funding various groups to develop TCP/IP technology. When the Internet began to transition to a commercial opportunity during the late 1980s,[citation needed] Cerf moved to MCI where he was instrumental in the development of the first commercial email system (MCI Mail) connected to the Internet.
+    </hobbies>
+    <imagename>Vint_Cerf.jpg</imagename>
+  </detail>
+  </person>
