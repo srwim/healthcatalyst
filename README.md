@@ -11,3 +11,5 @@ An ASP.NET MVC Application
 Use Ajax to respond to search request (no full page refresh) using JSON for both the request and the response
 Use Entity Framework Code First to talk to the database
 Unit Tests for appropriate parts of the application
+
+Comments to follow.
